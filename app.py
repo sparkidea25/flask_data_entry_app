@@ -27,7 +27,7 @@ def run_selenium():
     apart_id = request.args['sortId']
     print(apart_id, 'see what is apart')
     selenium_function(apart_id)
-    return 'Selenium function executed successfully!'
+    return redirect('/')
 
         
         
