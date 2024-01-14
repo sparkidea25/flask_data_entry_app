@@ -17,7 +17,6 @@ PROJECT_ROOT = os.path.realpath(os.path.dirname(__file__))
 
 # @app.route("/")
 # def apart_link():
-    
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -28,6 +27,10 @@ def run_selenium():
     print(apart_id, 'see what is apart')
     selenium_function(apart_id)
     return redirect('/')
+
+def create_event(apart_link):
+    
+    
 
         
         
