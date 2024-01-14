@@ -10,6 +10,7 @@ import calendar
 import json
 import os
 import csv
+from pydb import get_connection
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -61,6 +62,9 @@ def selenium_function(apart_id):
             writer.writerow(data[0])
             
             writer.writerow(data[1])
+            
+        # with get_connection.cursor() as cursor:
+            
             
     finally:
         # Close the browser window
