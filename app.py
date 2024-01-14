@@ -28,7 +28,9 @@ def run_selenium():
     selenium_function(apart_id)
     return redirect('/')
 
-def create_event(apart_link):
+def create_event(event_action, apart_link=''):
+    payload
+    
     
     
 
