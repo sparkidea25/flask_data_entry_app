@@ -15,6 +15,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from drive import upload_to_google_drive
+
+
+    
+
 
 
 def selenium_function(apart_id):
@@ -55,12 +60,16 @@ def selenium_function(apart_id):
         
         csv_filename = 'example.csv'
         
+       
+        
         with open(csv_filename, mode="a", newline='') as file:
             writer = csv.writer(file)
             
             writer.writerow(data[0])
             
             writer.writerow(data[1])
+            
+            upload_to_google_drive(writer)
             
     finally:
         # Close the browser window
