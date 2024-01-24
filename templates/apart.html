@@ -8,11 +8,10 @@
 
 {% include "menu.html" %}
 
-<div class="container">
 <br />
-<table style="width:100%">
+<table style="width:100%" id="datatable">
     <tr>
-      <th>Aparktment</th>
+      <th>Apartment</th>
       <th>Status</th>
       <th>Country</th>
     </tr>
@@ -23,16 +22,19 @@
 {% endfor %}
     <tr>
         <td>{{ aparts[0]['apart_link'] }}</td>
-      <td>Maria Anders</td>
-      <td>Germany</td>
+      <td>########</td>
+      <td>##########</td>
     </tr>
     <tr>
-      <td>Centro comercial Moctezuma</td>
-      <td>Francisco Chang</td>
-      <td>Mexico</td>
+      <td>###########</td>
+      <td>#############</td>
+      <td>###################</td>
     </tr>
   </table>
 
-    
-</div>
+<script>
+    $(document).ready(function(){
+        $('#datatable').DataTable();
+    });
+</script>
 
